@@ -4,40 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zomato Clone - Hero</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts (800 weight included) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+
+  <!-- Main CSS -->
 </head>
 <body>
 
-  <!-- Background Video -->
- <video autoplay muted loop playsinline id="bg-video">
-  <source src="home-page-video.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
-
-  <!-- Hero Section Content -->
-  <div class="hero-content">
-    <div class="content">
-      <h1>zomato</h1>
-      <span>India’s #1 <br>
-       food delivery app</span>
-      <p>Experience fast & easy online ordering <br>
-      on the Zomato app</p>
+  <section class="hero-section">
+    <div class="video-wrapper">
+      <video autoplay muted loop playsinline id="bg-video">
+        <source src="assets/videos/home-page-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
-    
-    <div class="hero-buttons">
-      <!-- Google Play Button Image -->
-<a href="https://play.google.com/store/apps/dev?id=7812834815367511165&hl=en_IN&pli=1&source_caller=ui&shortlink=iwz6g6kg&c=zomato_web_hp_android&pid=zomato_web_hp_android&deep_link_value=zomato://home&af_xp=social&af_force_deeplink=true" target="_blank">
- <img src="assets/googleplay.png" alt="Google Play" height="150" />
-</a>
 
-<!-- App Store Button Image -->
-<a href="https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896?source_caller=ui&shortlink=xigpfha6&c=zomato_web_hp_ios&pid=zomato_web_hp_ios&deep_link_value=zomato%3A%2F%2Fhome&af_xp=social&af_force_deeplink=true" target="_blank">
-  <img src="assets/appstore.png" alt="Download on the App Store" width="150" />
-</a>
+    <div class="hero-content">
+      <div class="content" data-aos="fade-up">
+        <h1>zomato</h1>
+        <span>India’s #1 <br> food delivery app</span>
+        <p>Experience fast & easy online ordering <br> on the Zomato app</p>
+      </div>
+      
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://play.google.com/store/apps/dev?id=7812834815367511165" target="_blank">
+          <img src="assets/images/googleplay.png" alt="Google Play" />
+        </a>
+        <a href="https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896" target="_blank">
+          <img src="assets/images/appstore.png" alt="App Store" />
+        </a>
+      </div>
+
+      <a href="#section2" class="scroll-down-btn">↓ Scroll Down</a>
     </div>
-  </div>
+  </section>
 
+  <!-- Section 2 (Next Page) -->
+  <!-- <div id="section2" class="next-page" data-aos="fade-up"> -->
+    <div id="section2" class="next-page">
+      <div class="section2content">
+        <h2>Better food for <br> more people</h2>
+        <p>For over a decade, we’ve enabled our customers to discover new tastes, delivered right to their doorstep.</p>
+      </div>
+      </div>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: false });
+  </script>
 </body>
 </html>
