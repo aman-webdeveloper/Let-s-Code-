@@ -139,14 +139,18 @@
     }
 
     .next-page {
+      display: flex;
   padding: 100px 20px;
   /* background-color: white; */
  background-image: url('assets/images/second-page2.png');
   background-size: cover;
   background-position: center;
   text-align: center;
+  overflow: visible;
   min-height: 100vh;
+  flex-wrap: wrap;
   /* color: black; */
+   justify-content: space-around;
 }
 .section2content{
   margin-top: 200px;
@@ -162,3 +166,124 @@
   flex-direction: column;
 
 }
+.left-section, .right-section {
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-page {
+  min-height: 100vh;
+  padding: 100px 20px;
+  background-image: url('assets/images/second-page2.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 30px;
+}
+
+/* Left */
+.left-section {
+  flex: 0 0 auto;
+}
+.left-section img {
+  width: 70px;
+  height: auto;
+}
+
+/* Center */
+.section2content {
+  flex: 1;
+  text-align: center;
+  max-width: 600px;
+}
+.section2content h2 {
+  font-size: 3.5rem;
+  color: rgb(239 79 95);
+}
+.section2content p {
+  font-size: 1.2rem;
+  color: rgb(89 99 120);
+  margin-top: 15px;
+}
+
+/* Right */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 0 0 auto;
+}
+.right-section img {
+  width: 70px;
+  height: auto;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .section-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .section2content {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+
+  .section2content h2 {
+    font-size: 1.6rem;
+  }
+
+  .section2content p {
+    font-size: 1rem;
+  }
+
+  .left-section img,
+  .right-section img {
+    width: 50px;
+  }
+
+  .right-section {
+    gap: 10px;
+  }
+}
+
+/* LEFT IMAGE */
+.left-section img {
+  width: 200px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .left-section img {
+    width:80px;
+  }
+}
+
+/* RIGHT IMAGES */
+.right-section img {
+  width: 200px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .right-section img {
+    width: 50px;
+  }
+}
+
+
